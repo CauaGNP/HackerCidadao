@@ -1,0 +1,26 @@
+.sectionProfile{
+    width: 300px;
+    height: 600px;
+
+    border-radius: 8px;
+
+    background-color: #FFFFFF;
+
+    padding: 24px;
+
+    .profileImage{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .userInformation{
+        text-align: center;
+
+        margin-top: 12px;
+        h1{
+            font-weight: 500;
+        }
+    }
+  }

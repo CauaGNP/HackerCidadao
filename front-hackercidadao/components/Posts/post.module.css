@@ -1,0 +1,26 @@
+.section{
+    width: 100%;
+
+    .userName{  
+        font-weight: 500;
+        font-size: 20px;    
+    }
+    
+    .title{
+        font-weight: 400;
+        font-size: 18px;
+    }
+    
+    .commets{
+        font-size: 16px;
+    }
+    
+    .input{
+        border: 1px solid black;
+        border-radius: 5px;
+    
+        width: 220px;
+
+        padding: 3px 16px;
+    }
+}

@@ -1,0 +1,99 @@
+.header{
+  padding: 12px 24px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  .headerTitle{
+    font-weight: 400;
+  }
+
+  .navBar{
+    height: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+
+    .setting{
+      cursor: pointer;
+    }
+
+    .nav{
+      height: 100%;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.main{
+  padding: 32px 24px;
+
+  background-color: rgba(214, 214, 214, 0.836);
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+
+  .sectionProfile{
+    width: 300px;
+    height: 600px;
+
+    border-radius: 8px;
+
+    background-color: #FFFFFF;
+  }
+
+  .divDivision{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .notification{
+      background-color: #FFFFFF;
+      border-radius: 8px;
+      
+      width: 700px;
+      height: 100px;
+    }
+  
+    .post{
+      background-color: #FFFFFF;
+      width: 700px;
+
+      border-radius: 8px;
+
+      padding: 16px;
+    }
+  }
+}
+
+.alertButton{
+  width: 100px;
+  height: 100px;
+
+  background-color: #ff0000;
+  border-radius: 50%;
+  border: 0;
+
+  cursor: pointer;
+
+  position: fixed;
+  bottom: 20px;      
+  left: 50%;         
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  z-index: 1000;
+}
+
+.alertButton:hover{
+  background-color: #d32323;
+}

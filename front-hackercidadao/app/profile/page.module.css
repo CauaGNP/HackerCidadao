@@ -1,0 +1,56 @@
+.header{
+    padding: 12px 24px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+
+    .backButton{
+        display: flex;
+        align-items: center;
+    }
+
+    .headerTitle{
+        font-size: 24px;
+        font-weight: 400;
+    }  
+}
+
+.main{
+    padding: 32px 24px;
+
+    background-color: rgba(214, 214, 214, 0.836);
+
+    width: 100%;
+    min-height: 100vh;
+
+    .ulList{
+        list-style: none;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        li{
+            padding: 12px;
+            background-color: #FFFFFF;
+
+            .link{
+                text-decoration: none;
+            }
+        
+            h1{
+                color: #000000;
+                font-size: 24px;
+                font-weight: 300;
+                text-decoration: none;
+            }
+        }
+
+        li:hover{
+            background-color: #b8b8b8;
+            transition: all .3s;
+        }
+    }
+}
