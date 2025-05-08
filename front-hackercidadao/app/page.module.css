@@ -43,15 +43,6 @@
   flex-direction: row;
   gap: 100px;
 
-  .sectionProfile{
-    width: 300px;
-    height: 600px;
-
-    border-radius: 8px;
-
-    background-color: #FFFFFF;
-  }
-
   .divDivision{
     display: flex;
     flex-direction: column;
@@ -63,6 +54,8 @@
       
       width: 700px;
       height: 100px;
+
+      padding: 16px;
     }
   
     .post{
@@ -96,4 +89,36 @@
 
 .alertButton:hover{
   background-color: #d32323;
+}
+
+@media screen and (max-width: 680px) {
+  .header{
+    width: 100%;
+  }
+
+  .main{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .divDivision{
+      .notification{
+        width: 350px;
+      }
+
+      .post{
+        width: 350px;
+      }
+    }
+  }
+
+  .alertButton{
+    width: 80px;
+    height: 80px; 
+  }
+
+  .alertButton :global(img) {
+    width: 100% !important;
+    height: auto !important;
+  }
 }

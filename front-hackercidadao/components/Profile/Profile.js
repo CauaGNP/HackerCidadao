@@ -17,6 +17,8 @@ export default function Profile(){
 
         <section className={styles.userInformation}>
             <h1>Nome Usuário</h1>
+            <h2>Idade: 23</h2>
+            <h2>Diabético tipo 1</h2>
         </section>
 
       </div>

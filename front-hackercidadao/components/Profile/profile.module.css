@@ -16,11 +16,22 @@
     }
 
     .userInformation{
-        text-align: center;
-
         margin-top: 12px;
+        text-align: center;
         h1{
             font-weight: 500;
         }
+
+        h2{
+            font-size: 20px;
+            font-weight: 500;
+        }
     }
-  }
+}
+
+@media screen and (max-width: 680px) {
+    .sectionProfile{
+        height: 350px;
+        width: 350px;
+    }
+}

@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import Post from "@/components/Posts/Post";
 import Profile from "@/components/Profile/Profile";
 import Swal from "sweetalert2";
+import Pending from "@/components/Pending/Pending";
 
 export default function Home() {
 
@@ -53,14 +54,6 @@ export default function Home() {
       <header className={styles.header}>
         <h1 className={styles.headerTitle}>asa</h1>
         <nav className={styles.navBar}>
-          <Image 
-            className={styles.setting}
-            src="/setting.png"
-            width={40}
-            height={40}
-            alt="User Icon"
-          />
-
           <Link href={"profile"} className={styles.nav}>
             <Image 
             src="/profile-user.png"
@@ -75,7 +68,7 @@ export default function Home() {
           <Profile />
           <div className={styles.divDivision}>
             <section className={styles.notification}>
-
+                <Pending />
             </section>
 
             <section className={styles.post}>
@@ -94,7 +87,7 @@ export default function Home() {
               height={50}
               alt="danger icon"
             />
-          </button>
+      </button>
     </div>
   );
 }
