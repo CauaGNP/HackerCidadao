@@ -27,11 +27,55 @@
             font-weight: 500;
         }
     }
+
+    .sectionList{
+        margin-top: 16px;
+        ul{
+            li{
+            list-style: none;
+            font-size: 18px;
+            .button{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 8px;
+                cursor: pointer;
+                
+                .premium{
+                    color: #CD9801;
+                
+                }
+            }
+            }
+            li:hover{
+                background-color: rgba(214, 214, 214, 0.836);
+                border-radius: 6px;
+                
+                padding: 6px;
+
+                transition: all .3s;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 680px) {
     .sectionProfile{
-        height: 350px;
+        height: 400px;
         width: 350px;
+    }
+
+    .sectionList{
+        li{
+            margin-bottom: 12px;
+        }
+    }
+}
+
+@media screen and (min-width: 681px) and (max-width: 980px) {
+    .sectionProfile{
+        height: 350px;
+        width: 600px;
     }
 }

@@ -22,3 +22,14 @@
         padding: 3px 16px;
     }
 }
+
+.inputs{
+    display: flex;
+    gap: 24px;
+
+    .sendButton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -15,7 +15,6 @@ import {
   StreamingAvatarSessionState,
   useStreamingAvatarSession,
 } from '@/components/logic'
-import { CloseIcon } from '@/components/Icons'
 
 export default function Home() {
   const [srcImage, setSrcImage] = useState('/expend-zoom.png')
@@ -29,6 +28,10 @@ export default function Home() {
     width: 25,
     height: 25,
   })
+
+  useEffect(() => {
+    localStorage.setItem("comorbirty","diabetico");
+  }, [])
 
   const { sessionState } = useStreamingAvatarSession()
 
@@ -74,14 +77,23 @@ export default function Home() {
   const extendMinimizeChat = () => {
     if (srcImage == '/expend-zoom.png') {
       setSrcImage('/minimize-zoom.png')
-      chatBot.style.width = '700px'
-      chatBot.style.height = '500px'
-      chatBot.style.transition = 'all .3s'
-      titleChat.style.fontSize = '45px'
-      titleChat.style.transition = 'all .3s'
-
-      setWHButton((prev) => ({ ...prev, width: 50, height: 50 }))
-      setWHXButton((prev) => ({ ...prev, width: 40, height: 40 }))
+      if (window.matchMedia('(max-width: 680px)').matches) {
+        chatBot.style.width = '400px';
+        chatBot.style.height = '400px';
+      }else if (window.matchMedia('(max-width: 980px)').matches
+      ){
+        chatBot.style.width = '700px';
+        chatBot.style.height = '400px';
+      }else{
+        chatBot.style.width = '700px'
+        chatBot.style.height = '500px'
+        chatBot.style.transition = 'all .3s'
+        titleChat.style.fontSize = '45px'
+        titleChat.style.transition = 'all .3s'
+        setWHButton((prev) => ({ ...prev, width: 50, height: 50 }))
+        setWHXButton((prev) => ({ ...prev, width: 40, height: 40 }))
+      }
+      
     } else {
       setSrcImage('/expend-zoom.png')
       chatBot.style.width = '250px'
@@ -95,7 +107,7 @@ export default function Home() {
 
   useEffect(() => {
     Swal.fire({
-      title: 'Você tem relatórios a realizar',
+      title: 'Você precisa realizar o check-in!!',
       confirmButtonColor: '#ff0000',
     })
   }, [])
@@ -103,7 +115,7 @@ export default function Home() {
   return (
     <div>
       <header className={styles.header}>
-        <h1 className={styles.headerTitle}>asa</h1>
+        <h1 className={styles.headerTitle}>Cognit</h1>
         <nav className={styles.navBar}>
           <Link href={'profile'} className={styles.nav}>
             <Image

@@ -7,7 +7,8 @@
   align-items: center;
   
   .headerTitle{
-    font-weight: 400;
+    font-size: 28px;
+    font-weight: 500;
   }
 
   .navBar{
@@ -29,12 +30,6 @@
       align-items: center;
     }
   }
-
-  .nav:hover :global(img) {
-    width: 45px !important;
-    height: 45px !important;
-    transition: all .3s !important;
- }
 }
 
 .main{
@@ -92,6 +87,12 @@
   z-index: 1000;
 }
 
+.alertButton :global(img) {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+}
+
 .alertButton:hover{
   background-color: #d32323;
 }
@@ -138,7 +139,6 @@
       border: none;
       cursor: pointer;
     }
-    
   }
 }
 
@@ -150,6 +150,7 @@
   .main{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 50px;
 
     .divDivision{
@@ -171,5 +172,29 @@
   .alertButton :global(img) {
     width: 100% !important;
     height: auto !important;
+    object-fit: contain;
+  }
+}
+
+@media screen and (min-width: 681px) and (max-width: 980px) {
+  .main{
+    flex-direction: column;
+    align-items: center;
+
+      .divDivision{
+        .notification{
+          width: 600px;
+        }
+
+      .post{
+        width: 600px;
+      }
+    }
+  }
+
+  .alertButton :global(img) {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
   }
 }
