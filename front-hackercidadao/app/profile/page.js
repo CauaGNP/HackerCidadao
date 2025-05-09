@@ -23,7 +23,7 @@ export default function Profile(){
                     className={styles.link}
                     href={"/report"}> 
                         {/* <Image></Image> */}
-                        <h1>R</h1>
+                        <h1>Relatório</h1>
                     </Link>
                 </li>
                 <li>
@@ -31,7 +31,7 @@ export default function Profile(){
                     href={"/screening"}
                     className={styles.link}> 
                         {/* <Image></Image> */}
-                        <h1>T</h1>
+                        <h1>Triagem</h1>
                     </Link>
                 </li>
             </ul>
