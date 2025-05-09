@@ -128,6 +128,21 @@ export default function Home() {
         </div>
      
       </main>
+      
+      
+      
+      {isVideoCall && (
+        <div
+          className="w-screen h-screen flex flex-col"
+          style={{ position: 'fixed', top: 0, left: 0 }}
+        >
+          <div className="w-[900px] flex flex-col items-start justify-start gap-5 mx-auto pt-4 pb-20">
+            <div className="w-full">
+              <InteractiveAvatar />
+            </div>
+          </div>
+        </div>
+      )}
       <section className={styles.chat} id="chatBot">
         <div className={styles.headerChat}>
           <div>
