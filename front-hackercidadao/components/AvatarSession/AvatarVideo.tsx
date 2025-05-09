@@ -7,7 +7,7 @@ import { StreamingAvatarSessionState } from "../logic";
 import { CloseIcon } from "../Icons";
 import { Button } from "../Button";
 
-export const AvatarVideo = forwardRef<HTMLVideoElement>(({}, ref) => {
+export const AvatarVideo = forwardRef<HTMLVideoElement>(({ }, ref) => {
   const { sessionState, stopAvatar } = useStreamingAvatarSession();
   const { connectionQuality } = useConnectionQuality();
 
@@ -41,7 +41,7 @@ export const AvatarVideo = forwardRef<HTMLVideoElement>(({}, ref) => {
         <track kind="captions" />
       </video>
       {!isLoaded && (
-        <div className="w-full h-full flex items-center justify-center absolute top-0 left-0">
+        <div style={{ color: "white" }} className="w-full h-full flex items-center justify-center absolute top-0 left-0">
           Loading...
         </div>
       )}
