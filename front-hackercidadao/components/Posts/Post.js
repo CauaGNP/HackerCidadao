@@ -25,7 +25,7 @@ export default function Post(){
                 </button>
             </div>
             </div>
-            <div>
+            <div className={styles.margin}>
             <h1 className={styles.userName}>Joana Bezerra</h1>
             <h2 className={styles.title}>Praticando esportes</h2>
             <p className={styles.commets}>Hoje pratiquei vários tipos de esportes radicais, como skate e surf..</p>
