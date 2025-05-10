@@ -106,26 +106,22 @@ export default function Home() {
   }
 
   useEffect(() => {
-    Swal.fire({
-      title: 'Você precisa realizar o check-in!!',
-      confirmButtonColor: '#ff0000',
-    })
-  }, [])
+      const alertShown = sessionStorage.getItem('alertShown');
+
+      if (!alertShown) {
+        Swal.fire({
+          title: 'Você precisa realizar o check-in!!',
+          confirmButtonColor: '#ff0000',
+        });
+
+        sessionStorage.setItem('alertShown', 'true');
+      }
+    }, []);
 
   return (
     <div>
       <header className={styles.header}>
         <h1 className={styles.headerTitle}>Cognit</h1>
-        <nav className={styles.navBar}>
-          <Link href={'profile'} className={styles.nav}>
-            <Image
-              src="/profile-user.png"
-              width={40}
-              height={40}
-              alt="User Icon"
-            />
-          </Link>
-        </nav>
       </header>
       <main className={styles.main}>
         <Profile />
