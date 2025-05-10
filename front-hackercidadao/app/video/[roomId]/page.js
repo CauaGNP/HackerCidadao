@@ -16,14 +16,17 @@ export default function VideoRoom() {
     if (!roomId) return;
 
     const peer = new RTCPeerConnection({
-      iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
+      iceServers: [
+        { urls: "stun:stun.l.google.com:19302" },
+        {
+          urls: "127.0.0.1:3478",
+        },
+      ],
     });
 
     peerRef.current = peer;
 
-    socketRef.current = io("http://localhost:3002"); // altere se estiver usando outra porta ou domínio
-
-    socketRef.current.emit("join", roomId);
+    socketRef.current = io("https://back-end-hack-cidadao.onrender.com");
 
     navigator.mediaDevices
       .getUserMedia({ video: true, audio: true })
@@ -45,7 +48,18 @@ export default function VideoRoom() {
       }
     };
 
+    socketRef.current.emit("join", roomId);
+
+    socketRef.current.on("room-joined", async ({ initiator }) => {
+      if (initiator) {
+        console.log("Sou o iniciador da chamada");
+      } else {
+        console.log("Entrei na sala, aguardando offer...");
+      }
+    });
+
     socketRef.current.on("user-joined", async () => {
+      // apenas o iniciador vai criar a offer
       const offer = await peer.createOffer();
 
       await peer.setLocalDescription(offer);
