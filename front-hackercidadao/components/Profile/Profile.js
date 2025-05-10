@@ -109,20 +109,12 @@ export default function Profile() {
           <li>
             <button className={styles.button} onClick={registerMeasure}>
               <Image
-                src={
-                  comorbidity === "diabetico"
-                    ? "/glicosimetro.png"
-                    : "/assistencia-medica.png"
-                }
+                src="/glicosimetro.png"
                 width={35}
                 height={35}
                 alt="CheckList Icon"
               />
-              <span>
-                {comorbidity === "diabetico"
-                  ? "Registrar medição"
-                  : "Regitrar pressão"}
-              </span>
+              <span>"Registrar medição</span>
             </button>
           </li>
           <li>

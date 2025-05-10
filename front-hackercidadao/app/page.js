@@ -29,10 +29,6 @@ export default function Home() {
     height: 25,
   })
 
-  useEffect(() => {
-    localStorage.setItem("comorbirty","diabetico");
-  }, [])
-
   const { sessionState } = useStreamingAvatarSession()
 
   // const handleGeoLocation = () => {
