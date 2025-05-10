@@ -1,3 +1,14 @@
 [build]
   command = "npm install --legacy-peer-deps && npm run build"
   publish = "out"
+  
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NEXT_PRIVATE_TARGET = "server"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
