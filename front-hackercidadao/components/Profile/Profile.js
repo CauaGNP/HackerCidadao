@@ -6,8 +6,6 @@ import Swal from "sweetalert2";
 import styles from "./profile.module.css";
 
 export default function Profile() {
-  const comorbidity = localStorage.getItem("comorbirty");
-
   const registerMeasure = () => {
     Swal.fire({
       title: "Insira sua taxa de glicemia",
