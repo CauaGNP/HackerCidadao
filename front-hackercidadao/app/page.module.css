@@ -74,7 +74,7 @@
   width: 75px;
   height: 75px;
 
-  background-color: #ff0000;
+  background-color: #34864c;
   border-radius: 50%;
   border: 0;
 
@@ -94,7 +94,8 @@
 }
 
 .alertButton:hover{
-  background-color: #d32323;
+  background-color: #4ca567;
+  transition: all .3s;
 }
 
 .chat{

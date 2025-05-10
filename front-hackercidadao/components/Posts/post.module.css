@@ -1,4 +1,8 @@
 .section{
+    .margin{
+        margin-bottom: 24px;
+    }
+
     .userName{  
         font-weight: 500;
         font-size: 20px;    
@@ -11,6 +15,7 @@
     
     .commets{
         font-size: 16px;
+        margin-bottom: 16px;
     }
     
     .input{
