@@ -20,21 +20,25 @@ export default function Profile(){
         cancelButtonText: "Cancelar",
         confirmButtonText: "Confirmar",
         showLoaderOnConfirm: true, // Aqui será a requisição
-        // preConfirm: async (login) => {
-        //   try {
-           
-        //     return response.json();
-        //   } catch (error) {
-        //     Swal.showValidationMessage(`
-        //       Request failed: ${error}
-        //     `);
-        //   }
-        // },
+        preConfirm: async () => {
+          try {
+            const response = await fetch('http://localhost:80/exams/create-exam',{
+              method : 'POST',
+              headers : {
+                accept: 'application/json'
+              }
+            });
+            return response.json();
+          } catch (error) {
+            Swal.showValidationMessage(`
+              Request failed: ${error}
+            `);
+          }
+        },
         allowOutsideClick: () => !Swal.isLoading()
       }).then((result) => {
        if (result.isConfirmed) {
       const glicemia = result.value;
-      
       // Validação básica opcional
       if (!glicemia || glicemia <= 0) {
         Swal.fire({
@@ -65,7 +69,7 @@ export default function Profile(){
         </div>
 
         <section className={styles.userInformation}>
-            <h1>Nome Usuário</h1>
+            <h1>João Cleber de Oliveira</h1>
             <h2>Idade: 23</h2>
             <h2>Diabético tipo 1</h2>
         </section>
@@ -111,6 +115,16 @@ export default function Profile(){
                   alt="CheckList Icon"/>
                   <span>{comorbidity === "diabetico" ? "Registrar medição" : "Regitrar pressão"}</span>
                 </button>
+              </li>
+              <li>
+                <Link href="/calendar" className={styles.button}>
+                  <Image 
+                  src="/calendar.png"
+                  width={35}
+                  height={35}
+                  alt="Calendar Icon"/>
+                  <span>Agenda Consulta</span>
+                </Link>
               </li>
               <li>
                 <button className={styles.button}>

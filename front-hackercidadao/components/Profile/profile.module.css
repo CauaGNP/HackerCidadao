@@ -62,7 +62,7 @@
 
 @media screen and (max-width: 680px) {
     .sectionProfile{
-        height: 400px;
+        min-height: 400px;
         width: 350px;
     }
 
