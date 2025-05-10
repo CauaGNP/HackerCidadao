@@ -18,9 +18,9 @@ export default function VideoRoom() {
     const peer = new RTCPeerConnection({
       iceServers: [
         { urls: "stun:stun.l.google.com:19302" },
-        {
-          urls: "127.0.0.1:3478",
-        },
+        { urls: "stun:stun.l.google.com:19302" },
+        { urls: "stun:stun.l.google.com:19302" },
+        { urls: "stun:stun.l.google.com:19302" },
       ],
     });
 
