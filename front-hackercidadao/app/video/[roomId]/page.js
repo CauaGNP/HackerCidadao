@@ -21,7 +21,7 @@ export default function VideoRoom() {
 
     peerRef.current = peer;
 
-    socketRef.current = io("https://hack-cidadao-front-end.vercel.app"); // altere se estiver usando outra porta ou domínio
+    socketRef.current = io("https://back-end-hack-cidadao.onrender.com"); // altere se estiver usando outra porta ou domínio
 
     socketRef.current.emit("join", roomId);
 
