@@ -86,7 +86,6 @@ export default function Profile() {
                 height={30}
                 src="/program.png"
                 width={30}/>
-              />
               <span>Eventos</span>
             </button>
           </li>
