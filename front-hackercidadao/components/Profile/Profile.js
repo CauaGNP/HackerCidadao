@@ -17,7 +17,7 @@ export default function Profile() {
       showCancelButton: true,
       cancelButtonText: "Cancelar",
       confirmButtonText: "Confirmar",
-      showLoaderOnConfirm: true, // Aqui será a requisição
+      showLoaderOnConfirm: true,
       preConfirm: async () => {
         try {
           const response = await fetch(
@@ -40,7 +40,7 @@ export default function Profile() {
     }).then((result) => {
       if (result.isConfirmed) {
         const glicemia = result.value;
-        // Validação básica opcional
+  
         if (!glicemia || glicemia <= 0) {
           Swal.fire({
             title: "Valor inválido",
@@ -48,7 +48,6 @@ export default function Profile() {
           });
           return;
         }
-        // Aqui você pode salvar no localStorage, enviar pra API etc.
         Swal.fire({
           title: "Medição registrada",
           text: `Glicemia: ${glicemia}`,
@@ -77,6 +76,16 @@ export default function Profile() {
 
       <section className={styles.sectionList}>
         <ul>
+          <li>
+            <button className={styles.button}>
+              <Image
+                alt="Programing Icon"
+                height={30}
+                src="/category.png"
+                width={30}/>
+              <span>Feed</span>
+            </button>
+          </li>
           <li>
             <button className={styles.button}>
               <Image
@@ -112,7 +121,7 @@ export default function Profile() {
                 height={35}
                 alt="CheckList Icon"
               />
-              <span>"Registrar medição</span>
+              <span>Registrar medição</span>
             </button>
           </li>
           <li>
@@ -123,7 +132,7 @@ export default function Profile() {
                 height={35}
                 alt="Calendar Icon"
               />
-              <span>Agenda Consulta</span>
+              <span>Agenda</span>
             </Link>
           </li>
           <li>

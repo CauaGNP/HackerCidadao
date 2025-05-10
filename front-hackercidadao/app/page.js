@@ -116,7 +116,11 @@ export default function Home() {
   return (
     <div>
       <header className={styles.header}>
-        <h1 className={styles.headerTitle}>Cognit</h1>
+        <Image 
+        src="/cognitLogo.png"
+        width={120}
+        height={40}
+        alt="Cognit Logo"/>
       </header>
       <main className={styles.main}>
         <Profile />
@@ -219,7 +223,7 @@ export default function Home() {
         onClick={openCloseChat}
         id="alertButton"
       >
-        <Image src="/danger.png" width={40} height={40} alt="danger icon" />
+        <Image src="/live-chat.png" width={50} height={50} alt="danger icon" />
       </button>
     </div>
   )
